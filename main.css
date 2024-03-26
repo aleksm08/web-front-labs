@@ -22,3 +22,22 @@ footer {
     font-family: Arial;
     margin: 0px;
 }
+a:link {
+    color: blue;
+    text-decoration: none
+}
+a:visited {
+    color: green;
+    text-decoration: overline;
+    font-style: italic;
+}
+a:hover {
+    color: red;
+    background-color: blanchedalmond;
+    box-shadow: gray;
+    text-decoration: underline;
+}
+a:active {
+    color: black;
+    opacity: 0.3;
+}
