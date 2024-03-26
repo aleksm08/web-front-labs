@@ -47,3 +47,20 @@ a:active {
     color: black;
     opacity: 0.3;
 }
+div.menu {
+    border: 7px solid #00880080;
+    border-radius: 5px;
+    width: 300 px;
+    margin: 0 auto;
+    color: black;
+    background-color: burlywood;
+    box-shadow: #00880080;
+}
+div.menu:hover {
+    background-color: gold;
+    box-shadow: 0 0 15 px #00000030;
+}
+h1.zagolovok_menu {
+    color:brown;
+    font-style: bold;
+}
