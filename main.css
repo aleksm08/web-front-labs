@@ -9,18 +9,27 @@ header {
     color: green;
     font-family: Arial;
     margin: 0px;
+    padding: 10px;
+    font-size: 16pt;
 }
 main {
     background-color: lightblue;
     color: MediumVioletRed;
     font-family: Arial;
-    margin: 0px;
+    margin: 10px 20px 44.5px;
 }
 footer {
     background-color: black;
     color: green;
     font-family: Arial;
     margin: 0px;
+    padding: 10px;
+    font-size: 16pt;
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 a {
     color: blue;
@@ -48,9 +57,11 @@ a:active {
     opacity: 0.3;
 }
 div.menu {
-    border: 7px solid #00880080;
-    border-radius: 5px;
-    width: 300 px;
+    border: 12px solid #00880080;
+    border-radius: 20px;
+    border-top-right-radius: 90px;
+    border-bottom-left-radius: 80px;
+    width: 300px;
     margin: 0 auto;
     color: black;
     background-color: burlywood;
@@ -63,4 +74,5 @@ div.menu:hover {
 h1.zagolovok_menu {
     color:brown;
     font-style: bold;
+    text-align: center;
 }
