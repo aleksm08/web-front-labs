@@ -10,13 +10,14 @@ header {
     font-family: Arial;
     margin: 0px;
     padding: 10px;
-    font-size: 16pt;
+    font-size: 20pt;
 }
 main {
     background-color: lightblue;
     color: MediumVioletRed;
     font-family: Arial;
     margin: 10px 20px 44.5px;
+    font-size: 16pt;
 }
 footer {
     background-color: black;
@@ -24,7 +25,7 @@ footer {
     font-family: Arial;
     margin: 0px;
     padding: 10px;
-    font-size: 16pt;
+    font-size: 20pt;
     text-align: right;
     position: fixed;
     bottom: 0;
@@ -61,11 +62,12 @@ div.menu {
     border-radius: 20px;
     border-top-right-radius: 90px;
     border-bottom-left-radius: 80px;
-    width: 300px;
+    width: 400px;
     margin: 0 auto;
     color: black;
     background-color: burlywood;
     box-shadow: #00880080;
+    font-size: 18pt;
 }
 div.menu:hover {
     background-color: gold;
