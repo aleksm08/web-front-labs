@@ -78,3 +78,8 @@ h1.zagolovok_menu {
     font-style: bold;
     text-align: center;
 }
+h1 {
+    text-align: center;
+    font-style: bold;
+    color: brown;
+}
