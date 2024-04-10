@@ -18,19 +18,24 @@
                 margin: 15px;
                 position: static;
             }
+            .costyl {
+                position: relative;
+                z-index: 1;
+            }
             .position-relative {
                 position: relative;
                 left: 140px;
                 top: -130px;
-                z-index: -1;
+                z-index: 0;
             }
             .position-relative:hover {
-                z-index: 1;
+                z-index: 2;
             }
             .posistion-absolute {
                 position: absolute;
-                left: 50px;
-                top: 225px;
+                left: 310px;
+                top: 250px;
+                z-index: 1;
             }
             .posistion-absolute:hover {
                 width: 350px;
@@ -47,8 +52,8 @@
         </header>
         
         <main>
-            <div>static</div>
-            <div>static</div>
+            <div class="costyl">static</div>
+            <div class="costyl">static</div>
             <div class="position-relative">relative</div>
             <div>static</div>
             <div>static</div>
