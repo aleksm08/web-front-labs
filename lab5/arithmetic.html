@@ -53,6 +53,13 @@
                 let greetings = 'Категорически приветствую, товарищи!\nУчиться, учиться и учиться!\nВ единстве - сила, победа - в борьбе!'
                 alert(greetings)
             }
+            function changeOutput(buttonNum, backColor, textColor, borderColor) {
+                let output = document.getElementById('output');
+                output.innerHTML = 'Нажатая кнопка ' + buttonNum;
+                output.style.backgroundColor = backColor;
+                output.style.color = textColor;
+                output.style.border = '6px dotted ' + borderColor;
+            }
         </script>
 
         <style>
@@ -71,6 +78,11 @@
             }
             footer {
                 cursor: pointer;
+            }
+            #output {
+                border: 1px solid;
+                width: 300px;
+                height: 40px;
             }
         </style>
     </head>
@@ -102,6 +114,15 @@
             <div class="message" onclick="showDivid()">
                 Найти деление чисел
             </div>
+
+            <div>
+                <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'yellow', 'red', 'green')">
+                <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'black', 'lime', 'blue')">
+                <input type="button" value="Кнопка 3" onclick="changeOutput(3, 'gray', 'gold', 'violet')">
+                <input type="button" value="Кнопка 4" onclick="changeOutput(4, 'violet', 'blue', 'black')">
+            </div>
+
+            <div id="output"></div>
         </main>
         
         <footer ondblclick="showGreetings()">
