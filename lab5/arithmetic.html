@@ -60,6 +60,9 @@
                 output.style.color = textColor;
                 output.style.border = '6px dotted ' + borderColor;
             }
+            function changeBack() {
+                document.body.style.backgroundColor = 'red'
+            }
         </script>
 
         <style>
@@ -113,6 +116,10 @@
 
             <div class="message" onclick="showDivid()">
                 Найти деление чисел
+            </div>
+
+            <div class="message" onclick="changeBack()">
+                Изменить фон страницы
             </div>
 
             <div>

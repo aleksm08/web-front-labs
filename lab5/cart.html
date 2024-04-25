@@ -14,18 +14,21 @@
                 let inputB = document.getElementById('numberB');
                 let inputC = document.getElementById('numberC');
                 let inputD = document.getElementById('numberD');
-
+                let inputE = document.getElementById('numberE');
+                
                 let a = Math.max(parseInt(inputA.value), 0) || 0;
                 let b = Math.max(parseInt(inputB.value), 0) || 0;
                 let c = Math.max(parseInt(inputC.value), 0) || 0;
                 let d = Math.max(parseInt(inputD.value), 0) || 0;
+                let e = Math.max(parseInt(inputE.value), 0) || 0;
 
                 let priceA = 100;
                 let priceB = 80;
                 let priceC = 150;
                 let priceD = 300;
+                let priceE = 250;
 
-                let result = (a * priceA) + (b * priceB) + (c * priceC) + (d * priceD);
+                let result = (a * priceA) + (b * priceB) + (c * priceC) + (d * priceD) + (e * priceE);
                 document.getElementById('output').innerHTML = 'Общая цена: ' + result + ' рублей';
             }
             function clearCart () {
@@ -33,6 +36,7 @@
                 document.getElementById('numberB').value = '';
                 document.getElementById('numberC').value = '';
                 document.getElementById('numberD').value = '';
+                document.getElementById('numberE').value = '';
                 document.getElementById('output').innerHTML = '';
             }
         </script>
@@ -44,7 +48,7 @@
             .cart {
                 border: 5px solid purple;
                 width: fit-content;
-                height: 500px;
+                height: 550px;
                 background-color: wheat;
                 line-height: 1.15;
             }
@@ -64,10 +68,11 @@
             <div class="cart">
                 <h2>Корзина товаров</h2>
 
-                <label>Яблоки(100р/шт):<br><input type="number" placeholder="Введите количество яблок" min="0" id="numberA"></label><br>
-                <label>Груши (80р/шт):<br><input type="number" placeholder="Введите количество груш" min="0" id="numberB"></label><br>
-                <label>Апельсины (150р/шт):<br><input type="number" placeholder="Введите количество апельсинов" min="0" id="numberC"></label><br>
+                <label>Яблоки(100р/кг):<br><input type="number" placeholder="Введите количество яблок" min="0" id="numberA"></label><br>
+                <label>Груши (80р/кг):<br><input type="number" placeholder="Введите количество груш" min="0" id="numberB"></label><br>
+                <label>Апельсины (150р/кг):<br><input type="number" placeholder="Введите количество апельсинов" min="0" id="numberC"></label><br>
                 <label>Дыни (300р/шт):<br><input type="number" placeholder="Введите количество дынь" min="0" id="numberD"></label><br>
+                <label>Арбуз (250р/шт):<br><input type="number" placeholder="Введите количество арбузов" min="0" id="numberE"></label><br>
 
                 <button onclick="showPrice()">Рассчитать стоимость корзины</button>
                 <div id="output"></div>
