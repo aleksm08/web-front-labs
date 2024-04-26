@@ -8,11 +8,51 @@
         <link rel="stylesheet" href="../main.css">
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
         <script>
-
+            function changeColor(div) {
+                if (div.style.backgroundColor == 'rgb(255, 255, 0)') {
+                    div.style.backgroundColor = 'rgb(255, 0, 0)';
+                    div.style.color = 'rgb(0, 0, 0)';
+                    document.getElementById('color-name').innerHTML = 'красный';
+                }
+                else if (div.style.backgroundColor == 'rgb(255, 0, 0)') {
+                    div.style.backgroundColor = 'rgb(0, 0, 0)';
+                    div.style.color = 'rgb(255, 255, 255)';
+                    document.getElementById('color-name').innerHTML = 'чёрный';
+                }
+                else if (div.style.backgroundColor == 'rgb(0, 0, 0)') {
+                    div.style.backgroundColor = 'rgb(255, 165, 0)';
+                    div.style.color = 'rgb(75, 0, 130)';
+                    document.getElementById('color-name').innerHTML = 'оранжевый';
+                }
+                else if (div.style.backgroundColor == 'rgb(255, 165, 0)') {
+                    div.style.backgroundColor = 'rgb(245, 222, 179)';
+                    div.style.color = 'rgb(165, 42, 42)';
+                    document.getElementById('color-name').innerHTML = 'бежевый';
+                }
+                else {
+                    div.style.backgroundColor = 'rgb(255, 255, 0)';
+                    document.getElementById('color-name').innerHTML = 'жёлтый';
+                    div.style.color = 'rgb(128, 0, 128)';
+                }
+            }
         </script>
 
         <style>
-            
+            .changeBlock {
+                border: 3px solid blue;
+                background-color: rgb(255, 255, 0);
+                text-align: center;
+                color: rgb(128, 0, 128);
+                width: 60%;
+                margin: auto;
+                font-weight: bold;
+                padding: 5px;
+                cursor: pointer;
+                transition: all 2.5s ease;
+            }
+            span {
+                transition: 0.2s ease;
+            }
         </style>
     </head>
 
@@ -22,7 +62,10 @@
         </header>
         
         <main>
-
+            <div class="changeBlock" ondblclick="changeColor(this)">
+                Цвет: <span id="color-name">жёлтый</span><br>
+                Сделайте двойной щелчок, чтобы сменить цвет.
+            </div>
         </main>
         
         <footer>
