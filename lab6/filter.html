@@ -8,11 +8,72 @@
         <link rel="stylesheet" href="../main.css">
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
         <script>
+            function filter() {
+                let color = document.getElementById('wear-color').value;
+                let type = document.getElementById('wear-type').value;
+                let wear = document.getElementById('wear');
 
+                if (color == 'Красный' && type == 'Футболка') {
+                    wear.src = 'red-f.png';
+                }
+                else if (color == 'Красный' && type == 'Майка') {
+                    wear.src = 'red-m.jpg';
+                }
+                else if (color == 'Красный' && type == 'Поло') {
+                    wear.src = 'red-p.jpg';
+                }
+                else if (color == 'Белый' && type == 'Футболка') {
+                    wear.src = 'white-f.jpg';
+                }
+                else if (color == 'Белый' && type == 'Майка') {
+                    wear.src = 'white-m.jpg';
+                }
+                else if (color == 'Белый' && type == 'Поло') {
+                    wear.src = 'white-p.jpg';
+                }
+                else if (color == 'Чёрный' && type == 'Футболка') {
+                    wear.src = 'black-f.png';
+                }
+                else if (color == 'Чёрный' && type == 'Майка') {
+                    wear.src = 'black-m.jpg';
+                }
+                else if (color == 'Чёрный' && type == 'Поло') {
+                    wear.src = 'black-p.webp';
+                } 
+            }
         </script>
 
         <style>
-            
+            .filter {
+                border: 2px solid lightcoral;
+                border-top-right-radius: 90px;
+                border-bottom-left-radius: 80px;
+                width: fit-content;
+                height: fit-content;
+                text-align: center;
+                align-items: center;
+                padding: 25px;
+                margin: 10px auto;
+            }
+            h2 {
+                text-align: center;
+            }
+            button {
+                cursor: pointer;
+                width: fit-content;
+                margin: auto;
+                display: grid;
+                place-items: center;
+            }
+            select {
+                width: 25%;
+                text-align: center;
+            }
+            img {
+                width: 450px;
+                height: 450px;
+                object-fit: cover;
+            }
         </style>
     </head>
 
@@ -22,7 +83,25 @@
         </header>
         
         <main>
+            <div class="filter">
+                <h2>Фильтр для одежды</h2>
+                Цвет одежды:
+                <select id="wear-color">
+                    <option>Красный</option>
+                    <option>Белый</option>
+                    <option>Чёрный</option>
+                </select><br>
+                
+                Тип одежды:
+                <select id="wear-type">
+                    <option>Футболка</option>
+                    <option>Поло</option>
+                    <option>Майка</option>
+                </select><br>
 
+                <button onclick="filter()">Применить</button><br>
+                <img src="red-f.png" id="wear">
+            </div>
         </main>
         
         <footer>
