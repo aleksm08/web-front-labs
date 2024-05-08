@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Мартынов Александр Дмитриевич. Добавление блоков</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+        <script>
+            function addNewBlock() {
+                let newwBlock = document.createElement('div');
+                newwBlock.style.backgroundColor = 'orange';
+                newwBlock.style.height = '40px';
+                newwBlock.style.border = '2.5px solid gray';
+                newwBlock.style.width = '500px';
+                newwBlock.style.margin = '10px 0';
+
+                document.querySelector('main').appendChild(newwBlock);
+            }
+        </script>
+
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 7
+        </header>
+        
+        <main>
+            <button onclick="addNewBlock()">Добавить блок</button>
+        </main>
+        
+        <footer>
+            &copy; Александр Мартынов, ФБИ-22, 2 курс, 2024
+        </footer>
+    </body>
+</html>
