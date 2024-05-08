@@ -10,19 +10,39 @@
 
         <script>
             function addNewBlock() {
-                let newwBlock = document.createElement('div');
-                newwBlock.style.backgroundColor = 'orange';
-                newwBlock.style.height = '40px';
-                newwBlock.style.border = '2.5px solid gray';
-                newwBlock.style.width = '500px';
-                newwBlock.style.margin = '10px 0';
+                let newBlock = document.createElement('div');
+                newBlock.style.backgroundColor = 'orange';
+                newBlock.style.height = '40px';
+                newBlock.style.border = '2.5px solid gray';
+                newBlock.style.width = '500px';
+                newBlock.style.margin = '10px 0';
 
-                document.querySelector('main').appendChild(newwBlock);
+                document.querySelector('main').appendChild(newBlock);
+            }
+
+            function addNewBlocks() {
+                let inputBlocks = document.getElementById('qtBlocks');
+                let inBl = parseInt(inputBlocks.value) || 0;
+
+                let main = document.querySelector('main');
+                for(let i = 0; i<inBl; i++) {    
+                    let newBlock = document.createElement('div');
+                    newBlock.style.backgroundColor = 'orange';
+                    newBlock.style.height = '40px';
+                    newBlock.style.border = '2.5px solid gray';
+                    newBlock.style.width = `${200 + i*25}px`;
+                    newBlock.style.margin = '10px 0';
+                    newBlock.innerHTML = `Блок № ${i+1}: 2*${i}<sup>2</sup> = ${2 * i**2}`;
+
+                    main.appendChild(newBlock);
+                }
             }
         </script>
 
         <style>
-
+            input {
+                width: 200px;
+            }
         </style>
     </head>
 
@@ -32,7 +52,11 @@
         </header>
         
         <main>
+            <div>
+                <input type="number" placeholder="Введите количество блоков" min="0" id="qtBlocks">
+            </div>
             <button onclick="addNewBlock()">Добавить блок</button>
+            <button onclick="addNewBlocks()">Добавить блоки</button>
         </main>
         
         <footer>
