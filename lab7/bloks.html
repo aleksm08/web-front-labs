@@ -77,7 +77,42 @@
 
                     main.appendChild(newBlock);
                 }
-            } 
+            }
+
+            function translucentBlocks() {
+                let main = document.querySelector('main');
+
+                for(let i = 0; i<11; i++) {    
+                    let newBlock = document.createElement('div');
+                    newBlock.style.backgroundColor = 'orange';
+                    newBlock.style.height = '40px';
+                    newBlock.style.border = '2.5px solid gray';
+                    newBlock.style.width = '200px';
+                    newBlock.style.opacity = `${0 + i*10}%`;
+                    newBlock.style.margin = '10px 0';
+                    newBlock.innerHTML = `Блок № ${i}`;
+
+                    main.appendChild(newBlock);
+                }
+            }
+
+            // function addNewBlocks() {
+            //     let inputBlocks = document.getElementById('qtBlocks');
+            //     let inBl = parseInt(inputBlocks.value) || 0;
+
+            //     let main = document.querySelector('main');
+            //     for(let i = 0; i<inBl; i++) {    
+            //         let newBlock = document.createElement('div');
+            //         newBlock.style.backgroundColor = 'orange';
+            //         newBlock.style.height = '40px';
+            //         newBlock.style.border = '2.5px solid gray';
+            //         newBlock.style.width = `${200 + i*25}px`;
+            //         newBlock.style.margin = '10px 0';
+            //         newBlock.innerHTML = `Блок № ${i+1}: 2*${i}<sup>2</sup> = ${2 * i**2}`;
+
+            //         main.appendChild(newBlock);
+            //     }
+            // }
         </script>
 
         <style>
@@ -99,7 +134,7 @@
                 <button onclick="addNewBlocks()">Добавить блоки</button><br>
                 <button onclick="add20_50()">20 => 50</button>
                 <button onclick="addMns80_Pl10()">10 => -80</button>
-                <button></button><br>
+                <button onclick="translucentBlocks()">Полупрозрачные блоки</button><br>
                 <input type="number" placeholder="Введите количество блоков" min="0" id="qtBlocks">
                 <button id="">Цветные круги</button>
             </div>
