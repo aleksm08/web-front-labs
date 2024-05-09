@@ -32,7 +32,7 @@
                 average = average.toFixed('2');
 
                 let conclusion = document.getElementById('detail');
-                conclusion.innerHTML = `Среднее значение ${average}`;
+                conclusion.innerHTML = `Среднее значение: ${average}`;
                 
                 let button = document.querySelector('button');
                 button.style.display = 'none';
@@ -42,6 +42,11 @@
         <style>
             table {
                 border-collapse: collapse;
+                width: fit-content;
+                height: fit-content;
+                text-align: center;
+                align-items: center;
+                line-height: 1.6;
             }
         </style>
     </head>
