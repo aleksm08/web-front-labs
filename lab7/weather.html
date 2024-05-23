@@ -14,25 +14,29 @@
                 fetch(url)
                     .then(response => response.json())
                     .then(data => {
+                        const times = data.hourly.time;
                         const temperatures = data.hourly.temperature_2m;
 
-                        const currentHour = new Date();
-                        const eightAMIndex = currentHour.getHours() + 8; // Индекс для 8 утра
-                        const twelveDayIndex = currentHour.getHours() + 12; // Индекс для 12 дня
-                        const eightPMIndex = currentHour.getHours() + 20; // Индекс для 20 вечера
+                        const timeIndices = {
+                            '08:00': times.findIndex(time => time.endsWith('T08:00')),
+                            '12:00': times.findIndex(time => time.endsWith('T12:00')),
+                            '20:00': times.findIndex(time => time.endsWith('T20:00'))
+                        };
 
-                        const outputDiv = document.getElementById('output');
-                        outputDiv.innerHTML = `
-                        <div class="info-box">
-                            <h2>Прогноз погоды на сегодняшний день в Новосибирске:</h2>
-                            <div>Температура в 8 часов утра: ${temperatures[eightAMIndex]}°C</div>
-                            <div>Температура в 12 часов дня: ${temperatures[twelveDayIndex]}°C</div>
-                            <div>Температура в 20 часов вечера: ${temperatures[eightPMIndex]}°C</div>
-                        </div>
+                        const weatherHTML = `
+                            <div class="info-box">
+                                <h3>Прогноз погоды на сегодняшний день в Новосибирске:</h3>
+                                <div>Температура в 8 часов утра: ${temperatures[timeIndices['08:00']]}°C</div>
+                                <div>Температура в 12 часов дня: ${temperatures[timeIndices['12:00']]}°C</div>
+                                <div>Температура в 20 часов вечера: ${temperatures[timeIndices['20:00']]}°C</div>
+                            </div>
                         `;
+
+                        document.getElementById('output').innerHTML = weatherHTML;
                     })
                     .catch(error => {
-                        console.error('Ошибка:', error);
+                        console.error('Error fetching weather data:', error);
+                        document.getElementById('weather-info').innerHTML = '<p>Ошибка при получении данных о погоде.</p>';
                     });
             }
         </script>
@@ -44,6 +48,8 @@
                 margin: 10px 0;
                 background-color: #f9f9f9;
                 font-family: Arial, sans-serif;
+                width: fit-content;
+                height: fit-content;
             }
 
             .info-box h2 {
