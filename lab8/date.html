@@ -4,26 +4,32 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <title>Мартынов Александр Дмитриевич. </title> -->
+        <title>Мартынов Александр Дмитриевич. Дата</title>
         <link rel="stylesheet" href="../main.css">
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-
-        <script>
-
-        </script>
+        <script src="lab8.js"></script>
 
         <style>
-            
+            .frame {
+                border: 3px solid darkgoldenrod;
+                border-top-right-radius: 90px;
+                border-bottom-left-radius: 80px;
+                background-color: lightcyan;
+                padding: 30px;
+                width: fit-content;
+                margin: auto;
+                text-align: justify;
+            }
         </style>
     </head>
 
-    <body>
+    <body onload="showDate()">
         <header>
             НГТУ, ФБ, Лабораторная работа 8
         </header>
         
         <main>
-
+            <div id="current-date"></div>
         </main>
         
         <footer>
