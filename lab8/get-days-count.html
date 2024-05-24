@@ -4,16 +4,39 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <title>Мартынов Александр Дмитриевич. </title> -->
+        <title>Мартынов Александр Дмитриевич. Число дней с даты рождения</title>
         <link rel="stylesheet" href="../main.css">
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-
-        <script>
-
-        </script>
+        <script src="get-days-count.js"></script>
 
         <style>
-            
+            .frame {
+                border: 3px solid darkgoldenrod;
+                border-top-right-radius: 90px;
+                border-bottom-left-radius: 80px;
+                background-color: lightcyan;
+                padding: 30px;
+                width: fit-content;
+                margin: auto;
+                text-align: justify;
+                line-height: 1.8;
+            }
+            button {
+                padding: 5px 10px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+            input {
+                padding: 5px;
+                font-size: 16px;
+            }
+            #count-days {
+                font-size: 23px;
+            } 
         </style>
     </head>
 
@@ -23,7 +46,16 @@
         </header>
         
         <main>
-
+            <div class="frame">
+                <div>
+                    <label for="birthday">Дата рождения: <input type="date" id="birthday"></label>
+                </div>
+                <div>
+                    <button onclick="showDaysCount()">Показать число дней</button>
+                </div>
+                <div id="count-days"></div>
+                <button onclick="clearInput()">Очистить поля ввода и выводы</button>
+            </div>
         </main>
         
         <footer>

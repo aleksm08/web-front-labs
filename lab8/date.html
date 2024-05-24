@@ -24,7 +24,7 @@
                 border: 3px solid blueviolet;
                 border-top-left-radius: 90px;
                 border-bottom-right-radius: 80px;
-                background-color: lightcyan;
+                background-color: rgb(138, 228, 228);
                 padding: 30px;
                 width: fit-content;
                 margin: auto;
@@ -41,13 +41,16 @@
         <main>
             <div id="current-date"></div><br>
             <div class="daysWeek">
-                <label for="day">День:</label>
-                <input type="number" id="day" min="1" max="31" required>
-                <label for="month">Месяц:</label>
-                <input type="number" id="month" min="1" max="12" required>
-                <label for="year">Год:</label>
-                <input type="number" id="year" min="1900" max="2100" required>
-                <button onclick="getDayOfWeek()">День недели</button>
+                <label for="day">
+                    День: <input type="number" id="day" min="1" max="31" required>
+                </label>
+                <label for="month">
+                    Месяц: <input type="number" id="month" min="1" max="12" required>
+                </label>
+                <label for="year">
+                    Год: <input type="number" id="year" min="1900" max="2100" required>
+                </label>
+                <button onclick="getDayOfWeek()">Определить день недели</button>
                 <div id="day-of-week"></div>
             </div>
         </main>
