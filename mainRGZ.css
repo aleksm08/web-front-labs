@@ -87,25 +87,48 @@ header {
     margin-right: 5px;
 }
 
-.bar {
-    display: flex;
+/* Стили для иконок */
+.svg-icon {
+    display: inline-block;
+    width: 24px; /* Размер иконки */
+    height: 24px; /* Размер иконки */
+    vertical-align: middle;
+    outline: 1px solid red; /* Добавляем красную рамку вокруг иконки */
 }
 
+/* Стили для иконки поиска */
+.svg-icon--i-search {
+    /* Замените на путь к вашей иконке лупы */
+    background-image: url('./rgz/lupa.svg');
+}
+
+/* Стили для иконки обратной связи */
+.svg-icon--i-phone {
+    /* Замените на путь к вашей иконке конверта */
+    background-image: url('./rgz/callback_zel.svg');
+}
+
+/* Дополнительные стили для кнопок */
+.bar__btn {
+    display: inline-block;
+    padding: 5px;
+    color: #333; /* Цвет текста кнопки */
+    text-decoration: none;
+}
+
+.bar__btn:hover {
+    color: #007BFF; /* Цвет текста при наведении */
+}
+
+/* Дополнительные стили для элементов */
 .bar__item {
     margin-right: 10px;
 }
 
-.bar__btn {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s;
+.bar__item:last-child {
+    margin-right: 0;
 }
 
-.bar__btn:hover {
-    color: #66a74f;
-}
 
 .header__bar-tel {
     margin-left: 20px;
@@ -255,6 +278,7 @@ header {
     position: relative;
     z-index: 1;
 }
+
 
 /* ПОДВАЛ */
 footer {
