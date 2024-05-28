@@ -6,11 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Инвестиционная компани ПАО «ИК РУСС-ИНВЕСТ</title>
         <link rel="stylesheet" href="../mainRGZ.css">
+        <link rel="icon" href="rus-invest.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <style>
-            footer {
-                position: absolute;
-            }
             .currency-calculator {
                 max-width: 430px;
                 margin: 0 auto;
@@ -60,7 +59,7 @@
                 text-align: center;
                 color: #333;
             }
-            #exchange-rate {
+            .course-valute {
                 margin-bottom: 20px;
                 padding: 10px;
                 background-color: #e9ecef;
@@ -69,12 +68,199 @@
                 font-size: 16px;
                 color: #495057;
             }
+            .course-valute a{
+                text-decoration: underline;
+                color: #333;
+            }
+            .course-valute a:hover{
+                background-color: #ddd;
+            }
         </style>
     </head>
 
     <body>
-        <header>
-            Мартынов
+        <header id="header">
+            <div class="wrapper">
+                <div class="header__row">
+                    <div class="header__logo">
+                        <img alt="Контактная информация" src="logo.png" srcset="logo.png 2x, logo.png 3x" class="header__logo-img" title="Услуги инвестиционной компании – ПАО ИК «РУСС-ИНВЕСТ»">
+                    </div>
+
+                    <div class="header__col header__col--bar">
+                        <div class="header__bar">
+                            <div class="header__bar-controls">
+                                <a data-name="Личный кабинет" href="https://cabinet.russ-invest.com/Account/Login?ReturnUrl=%2f" class="tyue lk-menu" target="_blank" rel="nofollow">
+                                    <span class="svg-icon svg-icon--i-user " style="fill: #66a74f;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="svg-icon__glyph">
+                                            <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;-inkscape-font-specification:Bitstream Vera Sans" d="M 16 5 C 12.145852 5 9 8.1458513 9 12 C 9 14.408843 10.23116 16.55212 12.09375 17.8125 C 8.5266131 19.342333 6 22.881262 6 27 L 8 27 C 8 22.569334 11.569334 19 16 19 C 20.430666 19 24 22.569334 24 27 L 26 27 C 26 22.881262 23.473387 19.342333 19.90625 17.8125 C 21.76884 16.55212 23 14.408843 23 12 C 23 8.1458513 19.854148 5 16 5 z M 16 7 C 18.773268 7 21 9.2267317 21 12 C 21 14.773268 18.773268 17 16 17 C 13.226732 17 11 14.773268 11 12 C 11 9.2267317 13.226732 7 16 7 z" color="#000" overflow="visible" font-family="Bitstream Vera Sans"></path>
+                                        </svg>
+                                    </span>
+                                    <span itemprop="name">Личный кабинет</span>
+                                </a>
+                                <div class="bar">
+                                    <div class="bar__item">
+                                        <a rel="nofollow" href="https://www.russ-invest.com/search/" class="bar__btn search--js">
+                                            <span class="svg-icon svg-icon--i-search ">
+                                                <svg class="svg-icon__glyph" role="img">
+                                                    <use xlink:href="#i-search"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="bar__item">
+                                        <a href="https://www.russ-invest.com/callback/" class="bar__btn" rel="nofollow">
+                                            <span class="svg-icon svg-icon--i-phone ">
+                                                <span class="svg-icon__glyph call_icon"></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <a class="header__bar-tel" href="tel:+74953639380">+7 (495) 363-93-80</a>
+                                <a href="https://www.russ-invest.com/support/" class="support">Сообщить о проблеме</a>
+                            </div>
+                            <div id="title-search" class="header-block__search" itemscope="" itemtype="https://schema.org/WebSite">
+                                <link itemprop="url" href="https://www.russ-invest.com/">
+                                <form action="/search/index.php" class="mobile-block__search search" itemprop="potentialAction" itemscope="" itemtype="https://schema.org/SearchAction">
+                                    <link itemprop="target" href="https://www.russ-invest.com/search/?q={q}">
+                                    <input itemprop="query" id="title-search-input" type="text" name="q" value="" size="40" class="search__control" autocomplete="off">
+                                    <button type="submit" class="search__btn">
+                                        <span class="svg-icon svg-icon--i-search ">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon__glyph" role="img">
+                                                <use xlink:href="#i-search"></use>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="header__col header__col--nav" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+                            <nav class="nav">
+                                <div class="nav__item_wrap">
+                                    <a data-name="Инвестиции" itemprop="url" href="/investment/" class="tyue nav__item current ">
+                                        <span itemprop="name">Инвестиции</span>
+                                    </a>
+                                    <div class="headsubmenu">
+                                        <div>
+                                            <a href="/investment/repo/" itemprop="url">
+                                                <span itemprop="name">РЕПО</span>
+                                            </a>
+                                        </div>
+                                        <div><a href="/investment/trust/" itemprop="url"><span itemprop="name">Доверительное управление</span></a></div>
+                                        <div><a href="/investment/iis/" itemprop="url"><span itemprop="name">ИИС</span></a></div>
+                                        <div><a href="/investment/ecp/" itemprop="url"><span itemprop="name">Электронная подпись</span></a></div>
+                                        <div><a href="/investment/documents/" itemprop="url"><span itemprop="name">Документы</span></a></div>
+                                        <div><a href="/investment/liquidpapers/" itemprop="url"><span itemprop="name">Списки Ликвидных ценных бумаг</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="nav__item_wrap">
+                                    <a data-name="Трейдинг" itemprop="url" href="/itrade/" class="tyue nav__item current ">
+                                        <span itemprop="name">Трейдинг</span>
+                                    </a>
+                                    <div class="headsubmenu">
+                                        <div><a href="/itrade/currency/" itemprop="url"><span itemprop="name">Сделки на московской бирже валюты</span></a></div>
+                                        <div><a href="/itrade/derivatives/" itemprop="url"><span itemprop="name">Сделки на срочном рынке</span></a></div>
+                                        <div><a href="/itrade/euro/" itemprop="url"><span itemprop="name">Корпоративные еврооблигации</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="nav__item_wrap">
+                                    <div class="nav__item_wrap">
+                                        <a data-name="Тарифы" itemprop="url" href="/investment/documents/tarifs/" class="tyue nav__item current " style="color: #66a74f;" data-submenu="">
+                                            <span itemprop="name">Тарифы</span>
+                                        </a>
+                                        <div class="headsubmenu">
+                                            <div><a href="/itrade/brokerskoe-obsluzhivanie/" itemprop="url"><span itemprop="name">Брокерское обслуживание</span></a></div>
+                                            <div><a href="/investment/depositarium/tariffs/" itemprop="url"><span itemprop="name">Депозитарий</span></a></div>
+                                        </div>
+                                        </div>
+                                            <a data-name="Корпоративным клиентам" itemprop="url" href="/corpfin/" class="tyue nav__item current ">
+                                                <span itemprop="name">Корпоративным клиентам</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav__item_wrap">
+                                    <a data-name="Тарифы" itemprop="url" data-href="/investment/documents/tarifs/" href="/investment/documents/tarifs/" class="tyue nav__item current ">
+                                        <span itemprop="name">Тарифы</span>
+                                    </a>
+                                    <div class="headsubmenu">
+                                        <div><a href="/itrade/brokerskoe-obsluzhivanie/" itemprop="url"><span itemprop="name">Брокерское обслуживание</span></a></div>
+                                        <div><a href="/investment/depositarium/tariffs/" itemprop="url"><span itemprop="name">Депозитарий</span></a></div>
+                                    </div>                                                           
+                                </div>                              
+                            </nav>
+
+                            <div class="nav nav--variant-small yit">
+                                <div class="nav__item_wrap">
+                                    <a data-name="Аналитика" itemprop="url" data-href="/analytics/" href="/analytics/" class="tyue nav__item current ">
+                                        <span itemprop="name">Аналитика</span>
+                                    </a>
+                                    <div class="headsubmenu">
+                                        <div><a href="/analytics/news/" itemprop="url"><span itemprop="name">Новости фондового рынка</span></a></div>
+                                        <div><a href="/analytics/ideas/" itemprop="url"><span itemprop="name">Торговые и инвестиционные идеи</span></a></div>
+                                        <div><a href="/analytics/stranichka-glavnogo-ekonomista/" itemprop="url"><span itemprop="name">Страничка главного экономиста</span></a></div>
+                                        <div><a href="/analytics/weeklyreports/" itemprop="url"><span itemprop="name">Еженедельные обзоры</span></a></div>
+                                        <div><a href="/analytics/calendar/" itemprop="url"><span itemprop="name">Дивидендный календарь</span></a></div>
+                                        <div><a href="/analytics/about/" itemprop="url"><span itemprop="name">Об Аналитических обзорах</span></a></div>
+                                    </div>                    
+                                </div>
+                                <div class="nav__item_wrap">
+                                    <a data-name="Инвесторам и акционерам" itemprop="url" data-href="/investors/" href="/investors/" class="tyue nav__item current ">
+                                        <span itemprop="name">Инвесторам и акционерам</span>
+                                    </a>
+                                    <div class="headsubmenu">
+                                        <div><a href="/investors/irnews/" itemprop="url"><span itemprop="name">IR новости</span></a></div>
+                                        <div><a href="/investors/corporate/" itemprop="url"><span itemprop="name">Корпоративное управление</span></a></div>
+                                        <div><a href="/investors/emitent/" itemprop="url"><span itemprop="name">Раскрытие информации эмитента</span></a></div>
+                                        <div><a href="/investors/actmarket/" itemprop="url"><span itemprop="name">Рынок акций компании</span></a></div>
+                                        <div><a href="/investors/insider_info/" itemprop="url"><span itemprop="name">Инсайдерская информация</span></a></div>
+                                        <div><a href="/investors/dokumenty/" itemprop="url"><span itemprop="name">Документы для акционеров</span></a></div>
+                                        <div><a href="/investors/dividendy/" itemprop="url"><span itemprop="name">Дивиденды</span></a></div>
+                                        <div><a href="/investors/faq/" itemprop="url"><span itemprop="name">Часто задаваемые вопросы</span></a></div>
+                                        <div><a href="/investors/copies/" itemprop="url"><span itemprop="name">Предоставление копий документов</span></a></div>
+                                        <div><a href="/investors/sobranie-aktsionerov/2023/" itemprop="url"><span itemprop="name">Собрание акционеров 2023</span></a></div>
+                                        <div><a href="/investors/comp_strategy/" itemprop="url"><span itemprop="name">Стратегический план</span></a></div>
+                                        <div><a href="/investors/ircontacts/" itemprop="url"><span itemprop="name">IR контакты</span></a></div>
+                                        <div><a href="/investors/data-book/" itemprop="url"><span itemprop="name">Data book</span></a></div>
+                                    </div>                    
+                                </div>
+                                <div class="nav__item_wrap">
+                                    <a data-name="О компании" itemprop="url" data-href="/about/" href="/about/" class="tyue nav__item current ">
+                                        <span itemprop="name">О компании</span>
+                                    </a>
+                                    <div class="headsubmenu">
+                                        <div><a href="/about/management/" itemprop="url"><span itemprop="name">Руководство</span></a></div>
+                                        <div><a href="/about/board/" itemprop="url"><span itemprop="name">Совет директоров</span></a></div>
+                                        <div><a href="/about/struktura-kompanii/" itemprop="url"><span itemprop="name">Структура компании</span></a></div>
+                                        <div><a href="/about/reports/" itemprop="url"><span itemprop="name">Годовые отчеты</span></a></div>
+                                        <div><a href="/about/history/" itemprop="url"><span itemprop="name">История компании</span></a></div>
+                                        <div><a href="/about/licences/" itemprop="url"><span itemprop="name">Лицензии</span></a></div>
+                                        <div><a href="/about/awards/" itemprop="url"><span itemprop="name">Награды</span></a></div>
+                                        <div><a href="/about/news/" itemprop="url"><span itemprop="name">Новости компании</span></a></div>
+                                        <div><a href="/about/ratings/" itemprop="url"><span itemprop="name">Рейтинги</span></a></div>
+                                        <div><a href="/about/press/" itemprop="url"><span itemprop="name">Пресс-Центр</span></a></div>
+                                        <div><a href="/about/rekvizity/" itemprop="url"><span itemprop="name">Реквизиты</span></a></div>
+                                        <div><a href="/reviews/" itemprop="url"><span itemprop="name">Отзывы клиентов</span></a></div>
+                                    </div>                                                        
+                                </div>
+                                <div class="nav__item_wrap">
+                                    <a data-name="Контакты" itemprop="url" data-href="/contacts/" href="javascript:void(0);" class="tyue nav__item current active">
+                                        <span itemprop="name">Контакты</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header__buttons">
+                        <a href="https://www.russ-invest.com/forcustomers/" class="btn btn--default btn--with-arrow shine-button">Открыть счет</a>
+                        <a rel="nofollow" href="https://teleg.run/ICRUSSINVEST" class="sub-btn" target="_blank">
+                            <span class="sub-bg-fly"></span> 
+                            <span class="sub-text">Подпишитесь</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <div class="nav-panel">
@@ -93,9 +279,19 @@
         </div>
 
         <main>
+            <div id="rh-badge" style="overflow: visible; position: fixed; z-index: 99990; width: 65px; height: 186px; left: -27px; top: 277.2px;" class="rh-reset rh-left">
+                <div id="rh-badgeContent" style="display: none" class="rh-reset">Задать вопрос</div>
+                <div class="rh-inner rh-reset rh-medium" style="width: 65px; height: 186px; transform-origin: 42.5px 163.5px; right: 0px; position: absolute; display: block;">
+                    <img id="rh-badge-image" src="https://hb.bizmrg.com/data.redhelper.ru/images/badge/default/ru/left/badge_mt1.svg" title="" class="rh-reset">
+                </div>
+            </div>
+
             <div class="currency-calculator">
                 <h2>Калькулятор валют</h2>
-                <div id="exchange-rate"></div>
+                <div class="course-valute">
+                    <div id="exchange-rate"></div>
+                    <div><a href="https://www.cbr-xml-daily.ru/">Источник данных курса валют</a></div>
+                </div>
                 <label for="rubles">Введите сумму в рублях:</label>
                 <input type="number" id="rubles" min="0" placeholder="Сумма в рублях">
                 <label for="thb">Введите сумму в тайландских батах:</label>
@@ -105,8 +301,87 @@
             </div>
         </main>
     
-        <footer>
-            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-contacts-box col-md-5 col-xs-12">
+                        <p class="footer-contacts-title"><a href="https://www.russ-invest.com/contacts/" style="color:#fff;">Контакты</a></p>
+                        <p class="footer-contacts-adress">
+                            <span>Нащокинский пер., д.5, стр. 4 Москва, 119019</span>
+                        </p>
+                        <a href="tel:+74953639380" class="footer-phone">+7 (495) 363-93-80</a>
+                        <a href="https://www.russ-invest.com/callback/" class="footer-callback">Обратная связь</a>
+                        <p class="footer-text">Торговая платформа Quik</p>
+                    </div>
+                    <div class="footer-contacts-box col-md-4 col-xs-12">
+                        <ul class="footer-menu">
+                            <li><a href="https://www.russ-invest.com/investment/">Инвестиции</a></li>
+                            <li><a href="https://www.russ-invest.com/itrade/">Трейдинг</a></li>
+                            <li><a href="https://www.russ-invest.com/corpfin/">Корпоративным клиентам</a></li>
+                            <li><a href="/investment/documents/tarifs/">Тарифы</a></li>
+                            <li><a href="https://www.russ-invest.com/analytics/">Аналитика</a></li>
+                            <li><a href="https://www.russ-invest.com/investors/">Инвесторам и акционерам</a></li>
+                            <li><a href="https://www.russ-invest.com/about/">О компании</a></li>
+                            <li><a href="https://www.russ-invest.com/contacts/">Контакты </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contacts-box clearfix col-md-3 col-xs-12">
+                        <div class="footer-call-content-box">
+                            <a href="https://www.russ-invest.com/president/" class="footer-call-link">
+                                <span class="footer-contacts-title shine-button" style="margin-bottom: 20px;">Задать вопрос</span>
+                            </a>
+                            <p class="footer-call-text">Президенту - Генеральному директору</p>
+                            <p class="footer-contacts-title">Мы в социальных сетях</p>
+                            <div class="social-box">
+                                <a href="https://vk.com/public28593773" rel="nofollow" class="social-item" target="_blank">
+                                    <i class="fab fa-vk"></i>
+                                </a>
+                                <a href="https://teleg.run/ICRUSSINVEST" rel="nofollow" class="social-item" target="_blank">
+                                    <i class="fab fa-telegram"></i>
+                                </a>
+                                <a rel="nofollow" href="https://webmaster.yandex.ru/siteinfo/?site=https://www.russ-invest.com" class="social-item-x">
+                                    <img width="88" height="31" border="0" alt="Контактная информация" src="https://yandex.ru/cycounter?https://www.russ-invest.com&amp;theme=dark&amp;lang=ru">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div class="footer-yandex-star col-md-4 col-xs-12">
+                                <iframe src="https://yandex.ru/sprav/widget/rating-badge/1102300927?type=rating&amp;theme=dark" width="150" height="50" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-text-box footer-text-box-one col-md-6 col-xs-12">
+                        
+                        <p class="footer-text">Раскрытие информации в соответствии с Положением ЦБ РФ от 27 марта 2020 г. № 714-П (<a href="https://www.russ-invest.com/investors/emitent/">Перейти в раздел</a>)</p>
+        
+                        <p class="footer-text">Обязательная информация, подлежащая раскрытию в соответствии с Указанием ЦБ РФ от 02.08.2023 № 6496-У и Базовыми стандартами защиты прав и интересов получателей финансовых услуг <br>(<a href="https://www.russ-invest.com/required2024/" style="font-size: 21px;">Перейти в раздел</a>)</p>
+        
+                        <p class="footer-text"> Также ПАО «ИК РУСС-ИНВЕСТ» как эмитент раскрывает всю информацию на странице в сети Интернет ООО "Интерфакс-ЦРКИ" – информационного агентства, аккредитованного ЦБ РФ на раскрытие информации. <a rel="nofollow" href="https://www.e-disclosure.ru/portal/company.aspx?id=579" target="_blank">Подробнее</a>.</p>
+                        <p class="footer-text">Результаты проведения специальной оценки условий труда в организации.<a href="https://www.russ-invest.com/workconditions/">Подробнее</a>.</p>
+                        <p class="footer-text">
+                            <a href="https://www.russ-invest.com/sitemap/">Карта сайта</a>
+                        </p>
+                        <p class="footer-text">
+                            Разработка сайта —<a rel="nofollow" href="https://www.hcube.ru/" target="_blank">HCube</a>
+                        </p>
+                        <p class="footer-text">
+                            <a href="https://play.google.com/store/apps/details?id=com.companyname.russinvestclientscabinet" rel="nofollow">Скачать мобильное приложение РУСС-ИНВЕСТ Онлайн</a>
+                        </p>
+                    </div>
+                    <div class="footer-text-box col-md-6 col-xs-12">
+                        <p class="footer-text"> ПАО «ИК РУСС-ИНВЕСТ» (ОГРН: 1027739662796) обладает бессрочными лицензиями на 4 вида деятельности:</p>
+                        <p class="footer-text"> На осуществление брокерской деятельности № 045-06310-100000, выдана 10.12.2002г.</p>
+                        <p class="footer-text">На осуществление дилерской деятельности № 045-06312-010000, выдана 10.12.2002г.</p>
+                        <p class="footer-text">На осуществление депозитарной деятельности № 045-08757-000100, выдана 29.11.2005г.</p>
+                        <p class="footer-text">На осуществление деятельности по управлению ценными бумагами № 045-11769-001000, выдана 13.11.2008г.</p>
+                        <p class="footer-text">Предупреждение о рисках: предлагаемые к заключению договоры или финансовые инструменты являются высокорискованными и могут привести к потере внесенных денежных средств в полном объеме. До совершения сделок следует ознакомиться с рисками, с которыми они связаны. Представленная информация носит ознакомительный характер.</p>
+                        <div id="copyright">
+                            © 2024. Инвестиционная компания ПАО «ИК РУСС-ИНВЕСТ» - обслуживание физических и юридических лиц</div>
+                    </div>
+                </div>
+            </div>
         </footer>
         
         <script>
