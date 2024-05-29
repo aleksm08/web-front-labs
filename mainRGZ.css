@@ -93,7 +93,6 @@ header {
     width: 24px; /* Размер иконки */
     height: 24px; /* Размер иконки */
     vertical-align: middle;
-    outline: 1px solid red; /* Добавляем красную рамку вокруг иконки */
 }
 
 /* Стили для иконки поиска */
@@ -189,6 +188,7 @@ header {
 .nav__item.current {
     background-color: #66a74f;
     color: #fff;
+    margin: 5px;
 }
 
 .headsubmenu {

@@ -28,22 +28,32 @@
         </script>
 
         <style>
-            .col-md-4 {
-                width: 30%;
-                padding: 0 15px;
-            }
             main {
                 text-align: center;
-                
             }
-            button{
+            .all {
+                background-color: white;
+                padding: 20px;
+                padding-top: 2px;
+                border-radius: 8px;
+                box-shadow: 5px 7px 13px rgba(0, 0, 0, 0.1);
+                color: black;
+                font-size: 20px;
+                margin-right: 120px;
+                margin-left: 120px;
+                line-height: 1.5;
+            }
+            .butNew {
                 font-size: 14px;
                 width: 150px;
                 text-align: center;
                 margin: 10px;
+                background-color: #17eae6;
+                border-radius: 8px;
             }
-            h3 {
-                font-weight: lighter;
+            .butNew:hover {
+                background-color: #3a6ed5;
+                transform:scale(1.05) ;
             }
             .news {
                 margin: auto;
@@ -53,27 +63,190 @@
                 padding-left: 40px;
                 padding-right: 30px;
                 width: 800px;
-                background: #fff;
+                background: #d8d2d8;
                 overflow: hidden;
                 text-align: justify;
                 font: 16px 'Source Sans Pro', Tahoma, sans-serif;
+                border-radius: 8px;
             }
             .date {
-                color: #888;
-                font-size: 12px;
+                color: #202020;
+                font-size: 13px;
                 margin-bottom: 0px;
                 margin-top: 5px;
             }
-            .title {
+            .title a {
                 margin: 7px;
                 margin-left: 0;
+                font-weight: lighter;
+                text-decoration: underline;
+                cursor: pointer;
+                color: #456361;
+            }
+            .title a:hover {
+                color: #0e058d;
+            }
+            .news p {
+                line-height: 1.5;
+                text-indent: 1.25cm;
+            }
+            #display {
+                color: #888;
             }
         </style>
     </head>
 
     <body>
-        <header>
-            Мартынов
+        <header id="header">
+            <div class="wrapper">
+                <div class="header__row">
+                    <div class="header__logo">
+                        <img alt="Контактная информация" src="logo.png" srcset="logo.png 2x, logo.png 3x" class="header__logo-img" title="Услуги инвестиционной компании – ПАО ИК «РУСС-ИНВЕСТ»">
+                    </div>
+
+                    <div class="header__col header__col--bar">
+                        <div class="header__bar">
+                            <div class="header__bar-controls">
+                                <a data-name="Личный кабинет" href="https://cabinet.russ-invest.com/Account/Login?ReturnUrl=%2f" class="tyue lk-menu" target="_blank" rel="nofollow">
+                                    <span class="svg-icon svg-icon--i-user " style="fill: #66a74f;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="svg-icon__glyph">
+                                            <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;-inkscape-font-specification:Bitstream Vera Sans" d="M 16 5 C 12.145852 5 9 8.1458513 9 12 C 9 14.408843 10.23116 16.55212 12.09375 17.8125 C 8.5266131 19.342333 6 22.881262 6 27 L 8 27 C 8 22.569334 11.569334 19 16 19 C 20.430666 19 24 22.569334 24 27 L 26 27 C 26 22.881262 23.473387 19.342333 19.90625 17.8125 C 21.76884 16.55212 23 14.408843 23 12 C 23 8.1458513 19.854148 5 16 5 z M 16 7 C 18.773268 7 21 9.2267317 21 12 C 21 14.773268 18.773268 17 16 17 C 13.226732 17 11 14.773268 11 12 C 11 9.2267317 13.226732 7 16 7 z" color="#000" overflow="visible" font-family="Bitstream Vera Sans"></path>
+                                        </svg>
+                                    </span>
+                                    <span itemprop="name">Личный кабинет</span>
+                                </a>
+                                <a class="header__bar-tel" href="tel:+74953639380">+7 (495) 363-93-80</a>
+                                <a href="https://www.russ-invest.com/support/" class="support">Сообщить о проблеме</a>
+                            </div>
+                            <div id="title-search" class="header-block__search" itemscope="" itemtype="https://schema.org/WebSite">
+                                <link itemprop="url" href="https://www.russ-invest.com/">
+                                <form action="/search/index.php" class="mobile-block__search search" itemprop="potentialAction" itemscope="" itemtype="https://schema.org/SearchAction">
+                                    <link itemprop="target" href="https://www.russ-invest.com/search/?q={q}">
+                                    <input itemprop="query" id="title-search-input" type="text" name="q" value="" size="40" class="search__control" autocomplete="off">
+                                    <button type="submit" class="search__btn">
+                                        <span class="svg-icon svg-icon--i-search ">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon__glyph" role="img">
+                                                <use xlink:href="#i-search"></use>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="header__col header__col--nav" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+                            <nav class="nav">
+                                <div class="nav__item_wrap">
+                                    <a data-name="Инвестиции" itemprop="url" href="/investment/" class="tyue nav__item current ">
+                                        <span itemprop="name">Инвестиции</span>
+                                    </a>
+                                    <div class="headsubmenu">
+                                        <div><a href="/investment/repo/" itemprop="url"><span itemprop="name">РЕПО</span></a></div>
+                                        <div><a href="/investment/trust/" itemprop="url"><span itemprop="name">Доверительное управление</span></a></div>
+                                        <div><a href="/investment/iis/" itemprop="url"><span itemprop="name">ИИС</span></a></div>
+                                        <div><a href="/investment/ecp/" itemprop="url"><span itemprop="name">Электронная подпись</span></a></div>
+                                        <div><a href="/investment/documents/" itemprop="url"><span itemprop="name">Документы</span></a></div>
+                                        <div><a href="/investment/liquidpapers/" itemprop="url"><span itemprop="name">Списки Ликвидных ценных бумаг</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="nav__item_wrap">
+                                    <a data-name="Трейдинг" itemprop="url" href="/itrade/" class="tyue nav__item current ">
+                                        <span itemprop="name">Трейдинг</span>
+                                    </a>
+                                    <div class="headsubmenu">
+                                        <div><a href="/itrade/currency/" itemprop="url"><span itemprop="name">Сделки на московской бирже валюты</span></a></div>
+                                        <div><a href="/itrade/derivatives/" itemprop="url"><span itemprop="name">Сделки на срочном рынке</span></a></div>
+                                        <div><a href="/itrade/euro/" itemprop="url"><span itemprop="name">Корпоративные еврооблигации</span></a></div>
+                                    </div>
+                                </div>
+                                <div class="nav__item_wrap">
+                                    <div class="nav__item_wrap">
+                                        <a data-name="Корпоративным клиентам" itemprop="url" href="/corpfin/" class="tyue nav__item current ">
+                                            <span itemprop="name">Корпоративным клиентам</span>
+                                        </a>
+                                        <div class="headsubmenu">
+                                            <div><a href="/itrade/brokerskoe-obsluzhivanie/" itemprop="url"><span itemprop="name">Брокерское обслуживание</span></a></div>
+                                            <div><a href="/investment/depositarium/tariffs/" itemprop="url"><span itemprop="name">Депозитарий</span></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav__item_wrap">
+                                    <a data-name="Тарифы" itemprop="url" data-href="/investment/documents/tarifs/" href="/investment/documents/tarifs/" class="tyue nav__item current ">
+                                        <span itemprop="name">Тарифы</span>
+                                    </a>
+                                    <div class="headsubmenu">
+                                        <div><a href="/itrade/brokerskoe-obsluzhivanie/" itemprop="url"><span itemprop="name">Брокерское обслуживание</span></a></div>
+                                        <div><a href="/investment/depositarium/tariffs/" itemprop="url"><span itemprop="name">Депозитарий</span></a></div>
+                                    </div>                                                           
+                                </div>                              
+                            </nav>
+
+                            <div class="nav nav--variant-small yit">
+                                <div class="nav__item_wrap">
+                                    <a data-name="Аналитика" itemprop="url" data-href="/analytics/" href="/analytics/" class="tyue nav__item current ">
+                                        <span itemprop="name">Аналитика</span>
+                                    </a>
+                                    <div class="headsubmenu">
+                                        <div><a href="/analytics/news/" itemprop="url"><span itemprop="name">Новости фондового рынка</span></a></div>
+                                        <div><a href="/analytics/ideas/" itemprop="url"><span itemprop="name">Торговые и инвестиционные идеи</span></a></div>
+                                        <div><a href="/analytics/stranichka-glavnogo-ekonomista/" itemprop="url"><span itemprop="name">Страничка главного экономиста</span></a></div>
+                                        <div><a href="/analytics/weeklyreports/" itemprop="url"><span itemprop="name">Еженедельные обзоры</span></a></div>
+                                        <div><a href="/analytics/calendar/" itemprop="url"><span itemprop="name">Дивидендный календарь</span></a></div>
+                                        <div><a href="/analytics/about/" itemprop="url"><span itemprop="name">Об Аналитических обзорах</span></a></div>
+                                    </div>                    
+                                </div>
+                                <div class="nav__item_wrap">
+                                    <a data-name="Инвесторам и акционерам" itemprop="url" data-href="/investors/" href="/investors/" class="tyue nav__item current ">
+                                        <span itemprop="name">Инвесторам и акционерам</span>
+                                    </a>
+                                    <div class="headsubmenu">
+                                        <div><a href="/investors/irnews/" itemprop="url"><span itemprop="name">IR новости</span></a></div>
+                                        <div><a href="/investors/corporate/" itemprop="url"><span itemprop="name">Корпоративное управление</span></a></div>
+                                        <div><a href="/investors/emitent/" itemprop="url"><span itemprop="name">Раскрытие информации эмитента</span></a></div>
+                                        <div><a href="/investors/actmarket/" itemprop="url"><span itemprop="name">Рынок акций компании</span></a></div>
+                                        <div><a href="/investors/insider_info/" itemprop="url"><span itemprop="name">Инсайдерская информация</span></a></div>
+                                        <div><a href="/investors/dokumenty/" itemprop="url"><span itemprop="name">Документы для акционеров</span></a></div>
+                                        <div><a href="/investors/dividendy/" itemprop="url"><span itemprop="name">Дивиденды</span></a></div>
+                                        <div><a href="/investors/faq/" itemprop="url"><span itemprop="name">Часто задаваемые вопросы</span></a></div>
+                                        <div><a href="/investors/copies/" itemprop="url"><span itemprop="name">Предоставление копий документов</span></a></div>
+                                        <div><a href="/investors/sobranie-aktsionerov/2023/" itemprop="url"><span itemprop="name">Собрание акционеров 2023</span></a></div>
+                                        <div><a href="/investors/comp_strategy/" itemprop="url"><span itemprop="name">Стратегический план</span></a></div>
+                                        <div><a href="/investors/ircontacts/" itemprop="url"><span itemprop="name">IR контакты</span></a></div>
+                                        <div><a href="/investors/data-book/" itemprop="url"><span itemprop="name">Data book</span></a></div>
+                                    </div>                    
+                                </div>
+                                <div class="nav__item_wrap">
+                                    <a data-name="О компании" itemprop="url" data-href="/about/" href="/about/" class="tyue nav__item current ">
+                                        <span itemprop="name">О компании</span>
+                                    </a>
+                                    <div class="headsubmenu">
+                                        <div><a href="/about/management/" itemprop="url"><span itemprop="name">Руководство</span></a></div>
+                                        <div><a href="/about/board/" itemprop="url"><span itemprop="name">Совет директоров</span></a></div>
+                                        <div><a href="/about/struktura-kompanii/" itemprop="url"><span itemprop="name">Структура компании</span></a></div>
+                                        <div><a href="/about/reports/" itemprop="url"><span itemprop="name">Годовые отчеты</span></a></div>
+                                        <div><a href="/about/history/" itemprop="url"><span itemprop="name">История компании</span></a></div>
+                                        <div><a href="/about/licences/" itemprop="url"><span itemprop="name">Лицензии</span></a></div>
+                                        <div><a href="/about/awards/" itemprop="url"><span itemprop="name">Награды</span></a></div>
+                                        <div><a href="/about/news/" itemprop="url"><span itemprop="name">Новости компании</span></a></div>
+                                        <div><a href="/about/ratings/" itemprop="url"><span itemprop="name">Рейтинги</span></a></div>
+                                        <div><a href="/about/press/" itemprop="url"><span itemprop="name">Пресс-Центр</span></a></div>
+                                        <div><a href="/about/rekvizity/" itemprop="url"><span itemprop="name">Реквизиты</span></a></div>
+                                        <div><a href="/reviews/" itemprop="url"><span itemprop="name">Отзывы клиентов</span></a></div>
+                                    </div>                                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header__buttons">
+                        <a href="https://www.russ-invest.com/forcustomers/" class="btn btn--default btn--with-arrow shine-button">Открыть счет</a>
+                        <a rel="nofollow" href="https://teleg.run/ICRUSSINVEST" class="sub-btn" target="_blank">
+                            <span class="sub-bg-fly"></span> 
+                            <span class="sub-text">Подпишитесь</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <div class="nav-panel">
@@ -99,7 +272,279 @@
                 </div>
             </div>
 
-            
+            <div class="all">
+                <h1>Новости компании</h1>
+                <div class="news">
+                    <div class="date">11.01.2024</div>
+                    <h3 class="title">
+                        <a href="https://www.russ-invest.com/about/news/56677/">
+                            Банк России предупреждает о мошеннических схемах по разблокировке активов
+                        </a>
+                    </h3>
+                    <div class="c1" id="display">
+                        Мошенники предлагают гражданам решить вопросы с их активами, заблокированными иностранными учетными институтами.
+                        Такие объявления массово распространяются...
+                    </div>
+                    <div style="display: none;" class="c1">
+                        <p>
+                            Мошенники предлагают гражданам решить вопросы с их активами, заблокированными иностранными учетными институтами.
+                            Такие объявления массово распространяются в Интернете, в социальных сетях и мессенджерах, а также рассылаются по
+                            электронным адресам пользователей, выявил Банк России. Для разблокировки требуется перевести на счет компании, которая предлагает такие услуги, сумму, равную стоимости замороженных активов. Людям обещают, что они вернут эти деньги на свой банковский счет в двойном размере.
+                            Аферисты могут выдавать себя за финансовую организацию, но при этом не иметь лицензии Банка России.    
+                        </p>
+                    </div>
+                    <div style="display: block;" class="c1" id="but">
+                        <button class="butNew" onclick="showNew(1)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c1" id="but">
+                        <button class="butNew" onclick="hideNew(1)">Скрыть</button>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <div class="date">09.01.2024</div>
+                    <h3 class="title">
+                        <a href="https://www.russ-invest.com/about/news/56671/">
+                            ПАО "ИК РУСС-ИНВЕСТ"подтвержден рейтинговый уровень "B" по результатам ESG-рейтинга устойчивого корпоративного управления за 2023 год
+                        </a>
+                    </h3>
+                    <div class="c2" id="display">
+                        По результатам ESG-рейтинга  устойчивого корпоративного управления за 2023 год для ПАО "ИК РУСС-ИНВЕСТ" подтвержден
+                            рейтинговый уровень "B". ПАО "ИК РУСС-ИНВЕСТ" оценивалось...
+                    </div>
+                    <div style="display: none;" class="c2">
+                        <p>
+                            По результатам ESG-рейтинга  устойчивого корпоративного управления за 2023 год для ПАО "ИК РУСС-ИНВЕСТ" подтвержден
+                            рейтинговый уровень "B". ПАО "ИК РУСС-ИНВЕСТ" оценивалось в данном рейтинге в третий раз и попало в 30% лучших
+                            компаний – участников рейтинга. 
+                        </p>
+                        <p>
+                            Всего в рейтинге за 2023 год оценивалось 233 крупных российских компании. Из них 5 получили рейтинг "A+", 26 компаний - рейтинг "A", 32 компании - рейтинг "B+", 16 компаний – рейтинг "B".
+                            ESG-рейтинг устойчивого корпоративного управления российских компаний разработан совместно АКР «Да-Стратегия» и Университетом Перуджи (Италия) с целью создания инструмента оценки компаний, который призван помочь им и инвесторам найти общий перечень наиболее финансово значимых ESG показателей, применимых как для принятия инвестиционных решений, так и для определения направлений корпоративного развития    
+                        </p>
+                    </div>
+                    <div style="display: block;" class="c2" id="but">
+                        <button class="butNew" onclick="showNew(2)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c2" id="but">
+                        <button class="butNew" onclick="hideNew(2)">Скрыть</button>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <div class="date">05.12.2023</div>
+                    <h3 class="title">
+                        <a href="https://www.russ-invest.com/about/news/56128/">
+                            Российский институт директоров подтвердил Национальный рейтинг корпоративного управления ПАО «ИК РУСС-ИНВЕСТ» – НРКУ 7+"Развитая практика корпоративного управления» по методике НРКУ"
+                        </a>
+                    </h3>
+                    <div class="c3" id="display">
+                        Российский институт директоров подтвердил Национальный рейтинг корпоративного управления ПАО «ИК РУСС-ИНВЕСТ» – НРКУ 7+ «Развитая практика корпоративного управления» по методике...
+                    </div>
+                    <div style="display: none;" class="c3">
+                        <p>
+                            Российский институт директоров подтвердил Национальный рейтинг корпоративного управления ПАО «ИК РУСС-ИНВЕСТ» – НРКУ 7+ «Развитая практика корпоративного управления» по методике НРКУ.
+                            В период проведения мониторинга практики корпоративного управления в Публичном акционерном обществе «ИНВЕСТИЦИОННАЯ КОМПАНИЯ ИК РУСС-ИНВЕСТ» (далее – ПАО «ИК РУСС-ИНВЕСТ», Компания) произошел ряд корпоративных событий.
+                        </p>
+                        <p>
+                            В декабре 2022 года Совет директоров Компании утвердил новую редакцию Положения по управлению рисками ПАО «ИК РУСС-ИНВЕСТ» и ряд документов, регулирующих вопросы управления конкретными видами рисков.
+                            В марте 2023 года Советом директоров ПАО «ИК РУСС-ИНВЕСТ» была утверждена новая редакция Положения о Комитете Совета директоров по кадрам и вознаграждениям.
+                        </p>
+                    </div>
+                    <div style="display: block;" class="c3" id="but">
+                        <button class="butNew" onclick="showNew(3)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c3" id="but">
+                        <button class="butNew" onclick="hideNew(3)">Скрыть</button>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <div class="date">03.12.2023</div>
+                    <h3 class="title">
+                        <a href="https://www.russ-invest.com/about/news/56123/">
+                            ПАО «ИК РУСС-ИНВЕСТ» исполнился 31 год!
+                        </a>
+                    </h3>
+                    <div class="c4" id="display">
+                        Сегодня ПАО "ИК РУСС-ИНВЕСТ" отмечает свой 31 День рождения. 3 декабря 1992  года Александр Бычков основал нашу компанию. Это первый День рождения, который мы отмечаем...
+                    </div>
+                    <div style="display: none;" class="c4">
+                        <p>
+                            Сегодня ПАО "ИК РУСС-ИНВЕСТ" отмечает свой 31 День рождения. 3 декабря 1992  года Александр Бычков основал нашу компанию. Это первый День рождения, который мы отмечаем без него. Предыдущий год был труден для нас, недавно мы потеряли своего бессменного лидера. Но продолжаем жить и работать дальше, делать всё возможное, а иногда невозможное, для Вас, наших клиентов. Ведь за долгие годы сотрудничества со многими из Вас мы стали настоящими друзьями.
+                        </p>
+                        <p>
+                            Несмотря ни на что поздравляем Вас с этим праздником! Всех, кто был сопричастен нашему бизнесу, клиентов, партнеров, сотрудников и просто друзей нашей компании с Днём рождения ИК РУСС-ИНВЕСТ!
+                        </p>
+                    </div>
+                    <div style="display: block;" class="c4" id="but">
+                        <button class="butNew" onclick="showNew(4)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c4" id="but">
+                        <button class="butNew" onclick="hideNew(4)">Скрыть</button>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <div class="date">01.12.2023</div>
+                    <h3 class="title">
+                        <a href="https://www.russ-invest.com/about/news/56120/">       
+                            Внимание, мошенники!
+                        </a>
+                    </h3>
+                    <div class="c5" id="display">
+                        ПАО "ИК РУСС-ИНВЕСТ" информирует, что за последнее время участились случаи мошенничества, когда злоумышленники обращались от имени Бычкова Александра...
+                    </div>
+                    <div style="display: none;" class="c5">
+                        <p>
+                            ПАО "ИК РУСС-ИНВЕСТ" информирует, что за последнее время участились случаи мошенничества, когда злоумышленники обращались от имени Бычкова Александра Петровича.
+                        </p>
+                        <p>
+                            <div>КОМПАНИЯ НАСТОЯТЕЛЬНО РЕКОМЕНДУЕТ:</div><br>
+                            <div>
+                                ИГНОРИРОВАТЬ сообщения в мессенджерах от имени Бычкова Александра Петровича СООБЩАТЬ В КОМПАНИЮ
+                                по электронной почте: mail@russ-invest.com о фактах подобных обращений.
+                            </div>
+                        </p>
+                    </div>
+                    <div style="display: block;" class="c5" id="but">
+                        <button class="butNew" onclick="showNew(5)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c5" id="but">
+                        <button class="butNew" onclick="hideNew(5)">Скрыть</button>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <div class="date">01.12.2023</div>
+                    <h3 class="title">
+                        <a href="https://www.russ-invest.com/about/news/56116/">
+                            ПАО «ИК РУСС-ИНВЕСТ провело акцию Экофармацевтика
+                        </a>
+                    </h3>
+                    <div class="c6" id="display">
+                        В офисе ПАО «ИК РУСС-ИНВЕСТ» с 14 по 30 ноября 2023 года прошла акция «Экофармацевтика», которая вызвала большой интерес у сотрудников...
+                    </div>
+                    <div style="display: none;" class="c6">
+                        <p>
+                            В офисе ПАО «ИК РУСС-ИНВЕСТ» с 14 по 30 ноября 2023 года прошла акция «Экофармацевтика», которая вызвала большой интерес у сотрудников компании. Проведение акции было направлено на реализацию действующей в компании «Экологической политики», внедрение принципов «зеленого офиса».
+                        </p>
+                        <p>
+                            Цель мероприятия заключалась в правильной утилизации просроченных лекарств и упаковок от них, в сборе непросроченных лекарств и обмене ими между сотрудниками компании. Акция проводилась совместно с фармацевтической компанией «Буарон» и АНО «Культура здоровья. В офисе компании были установлены специальные контейнеры для раздельного сбора блистеров, тюбиков и непросроченных лекарств. Все собранные фармацевтические отходы были переданы специализированному российскому оператору (НЭК) на переработку. Непросроченные лекарства, которые не были востребованы сотрудниками компании, переданы в приюты для бездомных животных.
+                        </p>
+                    </div>
+                    <div style="display: block;" class="c6" id="but">
+                        <button class="butNew" onclick="showNew(6)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c6" id="but">
+                        <button class="butNew" onclick="hideNew(6)">Скрыть</button>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <div class="date">14.11.2023</div>
+                    <h3 class="title">
+                        <a href="https://www.russ-invest.com/about/news/55997/">
+                            Внимание! Начиная с 25 октября 2023 года на Московской бирже наблюдается резкий рост цен на акции ИК РУСС-ИНВЕСТ.
+                        </a>
+                    </h3>
+                    <div class="c7" id="display">
+                        Начиная с 25 октября 2023 года на Московской бирже наблюдается резкий рост цен на акции ПАО «ИК РУСС-ИНВЕСТ»...
+                    </div>
+                    <div style="display: none;" class="c7">
+                        <p>
+                            Начиная с 25 октября 2023 года на Московской бирже наблюдается резкий рост цен на акции ПАО «ИК РУСС-ИНВЕСТ» (код RUSI). Обращаем внимание инвесторов, что необходимо взвешенно подходить к принятию решения о потенциальных сделках с данным активом с учетом доступной официальной информации от эмитента и профессиональных участников рынка ценных бумаг.
+                        </p>
+                    </div>
+                    <div style="display: block;" class="c7" id="but">
+                        <button class="butNew" onclick="showNew(7)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c7" id="but">
+                        <button class="butNew" onclick="hideNew(7)">Скрыть</button>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <div class="date">03.11.2023</div>
+                    <h3 class="title">
+                        <a href="https://www.russ-invest.com/about/news/55936/">
+                            Елена Долгих приняла участие в церемонии подписания соглашения в области достижения целей устойчивого развития между Правительством Ленинградской области и Национальной сетью Глобального Договора ООН
+                        </a>
+                    </h3>
+                    <div class="c8" id="display">
+                        30 октября 2023 Елена Долгих, Советник по устойчивому развитию Президента-Генерального директора ПАО «ИК РУСС-ИНВЕСТ» приняла участие в церемонии подписания соглашения...
+                    </div>
+                    <div style="display: none;" class="c8">
+                        <p>
+                            30 октября 2023 Елена Долгих, Советник по устойчивому развитию Президента-Генерального директора ПАО «ИК РУСС-ИНВЕСТ» приняла участие в церемонии подписания соглашения о намерении сотрудничества и партнерства в области достижения целей устойчивого развития Глобального договора ООН между Правительством Ленинградской области и Национальной сетью Глобального Договора ООН в России. ПАО «ИК РУСС-ИНВЕСТ» является одним из учредителей данной общественной организации. Церемония прошла в в Санкт-Петербурге.
+                            Соглашение подписали губернатор - председатель правительства Ленинградской области Александр Дрозденко и исполнительный директор Ассоциации «Национальная сеть Глобального Договора» Наталья Куплякова.
+                        </p>
+                        <p>
+                            «Ленинградская область является наиболее динамично развивающихся сегодня субъектов Российской Федерации. Для обеспечения устойчивого долгосрочного развития нам необходимо совершенствовать политику управления регионом, строить нашу политику управления на принципах сбалансированности, экономической согласованности, качественной социальной и ресурсной базы», — заявил губернатор в ходе церемонии подписания соглашения.
+                        </p>
+                    </div>
+                    <div style="display: block;" class="c8" id="but">
+                        <button class="butNew" onclick="showNew(8)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c8" id="but">
+                        <button class="butNew" onclick="hideNew(8)">Скрыть</button>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <div class="date">25.10.2023</div>
+                    <h3 class="title">
+                        <a href="https://www.russ-invest.com/about/news/55902/">
+                            24 октября 2023 года на 63 году ушёл из жизни Александр Петрович Бычков, Президент-Генеральный директор ПАО «ИК РУСС-ИНВЕСТ»
+                        </a>
+                    </h3>
+                    <div class="c9" id="display">
+                        Всю свою жизнь до последнего часа Александр Петрович отдал служению людям. Это было связано не только с его работой, но и...
+                    </div>
+                    <div style="display: none;" class="c9">
+                        <p>
+                            Всю свою жизнь до последнего часа Александр Петрович отдал служению людям. Это было связано не только с его работой, но и с душевной потребностью, с его неравнодушным и твердым характером, желанием быть полезным обществу и людям.
+                        </p>
+                        <p>
+                            В 1992 году он создал ПАО «ИК РУСС-ИНВЕСТ» - компанию, которая стояла у истоков российского фондового рынка, а затем был её бессменным руководителем на протяжении 30 лет. Выпускник экономического факультета МГУ им. М.В. Ломоносова, доктор экономических наук, мастер делового администрирования (MBA), беззаветно преданный своему делу, он постоянно генерировал новые идеи для развития компании и отрасли в целом.
+                        </p>
+                    </div>
+                    <div style="display: block;" class="c9" id="but">
+                        <button class="butNew" onclick="showNew(9)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c9" id="but">
+                        <button class="butNew" onclick="hideNew(9)">Скрыть</button>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <div class="date">29.09.2023</div>
+                    <h3 class="title">
+                        <a href="https://www.russ-invest.com/about/news/55826/">
+                            Менеджеры ИК РУСС-ИНВЕСТ вошли в рейтинг ТОП 1000 российских менеджеров
+                        </a>
+                    </h3>
+                    <div class="c10" id="display">
+                        Три менеджера ПАО «ИК РУСС-ИНВЕСТ» вошли в рейтинг ТОП 1000 российских менеджеров, который был опубликован 27 сентября 2023 года в газете...
+                    </div>
+                    <div style="display: none;" class="c10">
+                        <p>
+                            Три менеджера ПАО «ИК РУСС-ИНВЕСТ» вошли в рейтинг ТОП 1000 российских менеджеров, который был опубликован 27 сентября 2023 года в газете Коммерсант.
+                            Александр Бычков, Президент-Генеральный директор ИК РУСС-ИНВЕСТ,  вошёл в ТОП-250 высших руководителей и занял 6 позицию в разделе Финансовый сектор рейтинга.
+                        </p>
+                        <p>
+                            Александр Арутюнян, Первый  вице-президент-заместитель Генерального директора и Главный экономист ИК РУСС-ИНВЕСТ, занял 4 место в ТОП-100 Коммерческих директоров в разделе Финансовый сектор.
+                            Ольга Ильина, Корпоративный секретарь ИК РУСС-ИНВЕСТ, заняла 4 место в ТОП-50 директоров по корпоративному управлению в разделе Финансовый сектор.
+                        </p>
+                    </div>
+                    <div style="display: block;" class="c10" id="but">
+                        <button class="butNew" onclick="showNew(10)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c10" id="but">
+                        <button class="butNew" onclick="hideNew(10)">Скрыть</button>
+                    </div>
+                </div>
+            </div>
         </main>
     
         <footer id="footer">
